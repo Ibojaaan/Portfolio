@@ -1,13 +1,13 @@
 let telegram_bot_id = "5812981501:AAEUl22L5Seh46hGvWWbEyYyEEfqyHgPC-k"; // token'ni o'rniga Siz yaratgan Bot tokenini yozing
 //chat id
 let chat_id = 1369431958; // 1111'ni o'rniga habar borishi kerak bo'lgan joyni ID'sini yozing (Batafsil videoda)
-let email, text, subject, message;
+let email, name, subject, message;
 function sendtelegram() {
     email = document.getElementById("email").value;
-    text = document.getElementById("text").value;
+    name = document.getElementById("name").value;
     subject = document.getElementById("subject").value;
     message = document.getElementById("message").value;
-    message = "email: " + email + "\ntext: " + text + "\nsubject: " + subject + "\nmessage: " + message ;
+    message = "email: " + email + "\nname: " + name + "\nsubject: " + subject + "\nmessage: " + message ;
     let settings = {
         "async": true,
         "crossDomain": true,
@@ -26,7 +26,7 @@ function sendtelegram() {
         
     });
     document.getElementById("email").value = "";
-    document.getElementById("text").value = "";
+    document.getElementById("name").value = "";
     document.getElementById("subject").value = "";
     document.getElementById("message").value = "";
     return false;
